@@ -38,8 +38,8 @@ All agents operate under a CrewAI sequential workflow, enabling fully automated 
 ## Setup Instructions
 1. Clone the repository:
    ```bash
-   git clone https://github.com/jualam/Multi_Agent_Stock_Trader.git
-   cd CrewAI_Debate_System
+   git clone https://github.com/jualam/Agentic_Engineering_Workflow.git
+   cd Agentic_Engineering_Workflow
    
 2. Install dependencies:
    ```bash
