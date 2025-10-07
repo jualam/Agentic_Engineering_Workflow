@@ -1,55 +1,52 @@
-# AgenticEngineeringWorkflow Crew
+# Agentic Engineering Workflow (AEW)
 
-Welcome to the AgenticEngineeringWorkflow Crew project, powered by [crewAI](https://crewai.com). This template is designed to help you set up a multi-agent AI system with ease, leveraging the powerful and flexible framework provided by crewAI. Our goal is to enable your agents to collaborate effectively on complex tasks, maximizing their collective intelligence and capabilities.
+Agentic Engineering Workflow (AEW) is an autonomous multi-agent engineering pipeline that automates the full software development process from design to deployment using the CrewAI agentic framework.
 
-## Installation
+AEW simulates a collaborative engineering team composed of specialized AI agents, each with a defined role and goal. Working sequentially, these agents transform high-level requirements into a complete, working software system.
 
-Ensure you have Python >=3.10 <3.14 installed on your system. This project uses [UV](https://docs.astral.sh/uv/) for dependency management and package handling, offering a seamless setup and execution experience.
+## System Overview
 
-First, if you haven't already, install uv:
+- **Engineering Lead**: Converts high-level requirements into a detailed technical design and module specification.  
+- **Backend Engineer**: Implements a fully self-contained Python module following the design, safely executed inside Docker-isolated environments.  
+- **Frontend Engineer**: Builds a lightweight Gradio UI to demonstrate the backend logic and user interaction.  
+- **Test Engineer**: Writes and runs unit tests to validate correctness, functionality, and reliability.
 
-```bash
-pip install uv
-```
+All agents operate under a CrewAI sequential workflow, enabling fully automated code generation, integration, and testing, producing ready-to-run software artifacts and UI demos.
 
-Next, navigate to your project directory and install the dependencies:
+## Tech Stack
 
-(Optional) Lock the dependencies and install them by using the CLI command:
-```bash
-crewai install
-```
-### Customizing
+**Languages and Frameworks**
+- Python  
+- CrewAI (multi-agent framework)  
+- Gradio (frontend demo UI)  
 
-**Add your `OPENAI_API_KEY` into the `.env` file**
+**Tools and Environments**
+- Docker (safe code execution sandbox)  
+- YAML (agent and task configuration)  
+- Pytest (unit testing)  
+- OOP (modular architecture)
 
-- Modify `src/agentic_engineering_workflow/config/agents.yaml` to define your agents
-- Modify `src/agentic_engineering_workflow/config/tasks.yaml` to define your tasks
-- Modify `src/agentic_engineering_workflow/crew.py` to add your own logic, tools and specific args
-- Modify `src/agentic_engineering_workflow/main.py` to add custom inputs for your agents and tasks
+## Features
 
-## Running the Project
+- Fully autonomous multi-agent collaboration workflow  
+- Design to Implementation to Frontend to Testing all in one run  
+- Sandbox code execution using Docker for safety  
+- Automatically generated Gradio UI for demonstration  
+- Configurable agents and tasks via YAML  
+- Modular, self-contained Python modules for easy testing and extension
 
-To kickstart your crew of AI agents and begin task execution, run this from the root folder of your project:
+## Setup Instructions
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/jualam/Multi_Agent_Stock_Trader.git
+   cd CrewAI_Debate_System
+   
+2. Install dependencies:
+   ```bash
+   pip install -r requirements.txt or uv sync
+   
+3. Add your API keys in a .env file:
+OPENAI_API_KEY=your_openai_key
 
-```bash
-$ crewai run
-```
 
-This command initializes the agentic_engineering_workflow Crew, assembling the agents and assigning them tasks as defined in your configuration.
-
-This example, unmodified, will run the create a `report.md` file with the output of a research on LLMs in the root folder.
-
-## Understanding Your Crew
-
-The agentic_engineering_workflow Crew is composed of multiple AI agents, each with unique roles, goals, and tools. These agents collaborate on a series of tasks, defined in `config/tasks.yaml`, leveraging their collective skills to achieve complex objectives. The `config/agents.yaml` file outlines the capabilities and configurations of each agent in your crew.
-
-## Support
-
-For support, questions, or feedback regarding the AgenticEngineeringWorkflow Crew or crewAI.
-- Visit our [documentation](https://docs.crewai.com)
-- Reach out to us through our [GitHub repository](https://github.com/joaomdmoura/crewai)
-- [Join our Discord](https://discord.com/invite/X4JWnZnxPb)
-- [Chat with our docs](https://chatg.pt/DWjSBZn)
-
-Let's create wonders together with the power and simplicity of crewAI.
-# Agentic_Engineering_Workflow
+5. Start the application: crewai run
